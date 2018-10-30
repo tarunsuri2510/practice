@@ -1,0 +1,19 @@
+"Ec2lnstance" : {
+	"Type" : "AWS::EC2::Instance",
+	"MetaData" : {
+		"AWS::CloudFormation::Init" : {
+			"config" : {
+				"packages" : {
+					"yum" : {
+						"httpd" : []
+					}
+				}
+			},
+			
+			"sources" : {
+				"/etc/chef" : "https://s3.ama....zip"
+			}
+		}
+	}
+}
+				
